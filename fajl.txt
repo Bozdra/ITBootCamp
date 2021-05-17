@@ -1,0 +1,63 @@
+    1  pwd
+    2  ls
+    3  ls -l
+    4  cd ..
+    5  -l
+    6  -l
+    7  cd Desktop
+    8  l-
+    9  -l
+   10   -l
+   11   l--
+   12   l--
+   13   l-
+   14  pwd
+   15  ls -l
+   16  cd .. / ..
+   17  cd ../..
+   18  pwd
+   19  cd Desktop
+   20  cd desktop
+   21  cd Desktop
+   22  cd Desktop
+   23  cd Desktop
+   24  cd
+   25  cd
+   26  ls-l
+   27  ls -l
+   28  cd Desktop
+   29  cd OneDrive
+   30  cd Desktop
+   31  mkdir
+   32  mkdir test123
+   33  cd test123
+   34  touch test.txt
+   35  touch test.png
+   36  nano.test123
+   37  nano .test123
+   38  cat test123
+   39  cat test123.txt
+   40  cat test123.txt
+   41  cat test.txt
+   42  cat text.xtx
+   43  cat text.txt
+   44  cat text.txt
+   45  rm text.txt
+   46  ls -l
+   47  rm test.txt
+   48  ls - l
+   49  ls -k
+   50  ls -l
+   51  history
+   52  history > istorija.txt
+   53  tail istorija
+   54  tail istorija.txt
+   55  tail -n 3 istorija.txt
+   56  head istorija.txt
+   57  head -n 5 istorija.txt
+   58  time
+   59  ze:test123 admin$ cal
+   60  history
+   61  mkdir novi
+   62  cd novi
+   63  history > fajl.txt

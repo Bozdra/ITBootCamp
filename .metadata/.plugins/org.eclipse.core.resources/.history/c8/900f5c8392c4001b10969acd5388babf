@@ -1,0 +1,13 @@
+package objs;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import constants.Constants;
+
+public class Home {
+
+	public static void clickAbout(WebDriver driver) {
+		driver.findElement(By.xpath(Constants.ABOUTBTN_XPATH)).click();
+	}
+}

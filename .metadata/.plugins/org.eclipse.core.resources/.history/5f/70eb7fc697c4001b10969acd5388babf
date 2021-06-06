@@ -1,0 +1,9 @@
+package constants;
+
+public class Constants {
+public static final String HOME_URL = "https://www.humanity.com/";
+public static final String ABOUT_URL = "https://www.humanity.com/about";
+public static final String ABOUTBTN_XPATH = "//*[@id=\"navbarSupportedContent\"]/ul/li[6]/ul/li[1]";
+public static final String ABOUT_XPATH = "//*[@id=\"navbarSupportedContent\"]/ul/li[6]/ul";
+public static final String CLOSEMSSGBTN_XPATH = "//*[@id=\"tcp-modal\"]/div/div/div[1]/button";
+}

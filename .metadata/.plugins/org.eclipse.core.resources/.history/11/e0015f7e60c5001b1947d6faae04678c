@@ -1,0 +1,25 @@
+package tests;
+
+import org.openqa.selenium.ElementNotInteractableException;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeMethod;
+
+import constants.Constants;
+import objs.Home;
+
+public class TestDashboard {
+	private static WebDriver driver;
+
+	@BeforeMethod
+	public static void ulogujSe() {
+		driver.get(Constants.HOME_URL);
+		try {Home.closeAnnouncement(driver);
+		Home.closeCookieMsg(driver);
+		} catch (ElementNotInteractableException e) {}
+		driver.manage().window().maximize();
+		
+		Home.clickLogin(driver);
+	}
+	@Test 
+	public static void 
+}

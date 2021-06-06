@@ -1,0 +1,74 @@
+package tests;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.ElementNotInteractableException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import constants.Constants;
+import objs.Dashboard;
+import objs.Home;
+import objs.Login;
+import objs.Staff;
+
+public class TestStaff {
+	static WebDriver driver;
+	
+	@BeforeClass
+	public void loginAndDriver() throws IOException {
+		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get(Constants.HOME_URL);
+		try {Home.closeAnnouncement(driver);
+		Home.closeCookieMsg(driver);
+		} catch (ElementNotInteractableException e) {}
+		driver.manage().window().maximize();
+		Home.clickLogin(driver);
+		File f = new File("credentials.xlsx");
+		InputStream is = new FileInputStream(f);
+		XSSFWorkbook wb = new XSSFWorkbook(is);
+		Sheet sheet = wb.getSheetAt(0);
+		Row row = sheet.getRow(0);
+		String email = row.getCell(0).getStringCellValue();
+		String pass = row.getCell(1).getStringCellValue();
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		Login.inputEmail(driver, email);
+		Login.inputPass(driver, pass);
+		Login.clickLoginBtn(driver);
+		driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
+		wb.close();
+	}
+	@Test
+	public static void testAddEmployee() {
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+		Dashboard.clickStaff(driver);
+		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(Constants.ADDEMPLOYEEBTNBTN_XPATH))));
+
+		Staff.clickAddEmployee(driver);
+		
+		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.id(Constants.EMAILBARSTAFF_ID))));
+		Staff.inputFirstName(driver, "Boris");
+		Staff.inputLastName(driver, "Nedeljkovic");
+		Staff.inputEmail(driver, "Bozdra@gmail.com");
+		Staff.saveEmployee(driver);
+	
+		Assert.assertEquals(driver.findElement(By.partialLinkText(Constants.EMPLOYEENAMECHECK_XPATH)), "Boris Nedeljkovic");
+		
+	}
+	
+	
+}

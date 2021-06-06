@@ -1,0 +1,12 @@
+package Dice;
+
+public class Kockica {
+int broj1 = 1;
+int broj2 = 2;
+int broj3 = 3;
+int broj4 = 4;
+int broj5 = 5;
+int broj6 = 6;
+Kockica kockica = new Kockica();  
+
+}

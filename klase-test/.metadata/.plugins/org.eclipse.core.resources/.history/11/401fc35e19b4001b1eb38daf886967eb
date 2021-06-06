@@ -1,0 +1,24 @@
+package zadatak2;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Proba {
+
+	public static void main(String[] args) {
+		Stvar s1 = new Stvar(100, "Majica", 30, 'm');
+		System.out.println(s1.toString());
+		Odeca od1 = new Odeca(300, "Kosulja", 40, 'm', "Karirano");
+		Odeca od2 = new Odeca(500, "Jakna", 50, 'm', "Kozna");
+		Odeca od3 = new Odeca(200, "Pantalone", 39, 'm', "Dzins");
+		List <Odeca> odeca = new ArrayList<Odeca>();
+		odeca.add(od1);
+		odeca.add(od2);
+		odeca.add(od3);
+		System.out.println(odeca.toString());
+		Obuca o1 = new Obuca(1000, "Cipelke", 45, 'm', "Koza");
+		List <Obuca> obuca = new ArrayList<Obuca>();
+		
+	}
+
+}

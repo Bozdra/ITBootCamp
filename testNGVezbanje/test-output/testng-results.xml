@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="51" started-at="2021-05-25T08:08:17Z" finished-at="2021-05-25T08:08:17Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="51" started-at="2021-05-25T08:08:17Z" finished-at="2021-05-25T08:08:17Z">
+      <class name="banka.TestiranjeBanke">
+        <test-method status="PASS" signature="initBank()[pri:0, instance:banka.TestiranjeBanke@1b604f19]" name="initBank" is-config="true" duration-ms="12" started-at="2021-05-25T08:08:17Z" finished-at="2021-05-25T08:08:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initBank -->
+        <test-method status="PASS" signature="resetBanke()[pri:0, instance:banka.TestiranjeBanke@1b604f19]" name="resetBanke" is-config="true" duration-ms="0" started-at="2021-05-25T08:08:17Z" finished-at="2021-05-25T08:08:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetBanke -->
+        <test-method status="PASS" signature="testOtvaranjeNaloga()[pri:0, instance:banka.TestiranjeBanke@1b604f19]" name="testOtvaranjeNaloga" duration-ms="7" started-at="2021-05-25T08:08:17Z" finished-at="2021-05-25T08:08:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOtvaranjeNaloga -->
+        <test-method status="PASS" signature="testSume()[pri:0, instance:banka.TestiranjeBanke@1b604f19]" name="testSume" duration-ms="2" started-at="2021-05-25T08:08:17Z" finished-at="2021-05-25T08:08:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSume -->
+        <test-method status="PASS" signature="resetBanke()[pri:0, instance:banka.TestiranjeBanke@1b604f19]" name="resetBanke" is-config="true" duration-ms="0" started-at="2021-05-25T08:08:17Z" finished-at="2021-05-25T08:08:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetBanke -->
+        <test-method status="PASS" signature="testTransfera()[pri:0, instance:banka.TestiranjeBanke@1b604f19]" name="testTransfera" duration-ms="4" started-at="2021-05-25T08:08:17Z" finished-at="2021-05-25T08:08:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTransfera -->
+        <test-method status="PASS" signature="resetBanke()[pri:0, instance:banka.TestiranjeBanke@1b604f19]" name="resetBanke" is-config="true" duration-ms="0" started-at="2021-05-25T08:08:17Z" finished-at="2021-05-25T08:08:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetBanke -->
+        <test-method status="PASS" signature="resetBanke()[pri:0, instance:banka.TestiranjeBanke@1b604f19]" name="resetBanke" is-config="true" duration-ms="0" started-at="2021-05-25T08:08:17Z" finished-at="2021-05-25T08:08:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetBanke -->
+        <test-method status="PASS" signature="testUplate()[pri:0, instance:banka.TestiranjeBanke@1b604f19]" name="testUplate" duration-ms="2" started-at="2021-05-25T08:08:17Z" finished-at="2021-05-25T08:08:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUplate -->
+      </class> <!-- banka.TestiranjeBanke -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

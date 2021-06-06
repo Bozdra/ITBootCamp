@@ -1,0 +1,5 @@
+package objs;
+
+public class Inventory {
+	public static final INVENTORY_URL =  "https://www.saucedemo.com/inventory.html";
+}

@@ -1,0 +1,34 @@
+package test;
+
+import static org.testng.Assert.assertEquals;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import objs.Home;
+import objs.ListOfVideos;
+//za dodatni zadatak - spisak youtube pesama koje treba pretraziti/pustiti - spisak u excelu
+//dodatni zadatak 2 (nakon uradjena prethodna 2) - pustiti 3.pesmu iz recommended liste 
+//(s desne strane) nakon pustanja poslednje odabrane pesme
+
+public class TestVideo {
+	private static WebDriver driver;
+	@Test
+	public void testYT() throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32\\chromedriver.exe");
+		driver = new ChromeDriver();
+		Home.goToYT(driver);
+	
+		Home.findVideo(driver);
+		
+		Thread.sleep(2000);
+		
+		ListOfVideos.clickOnVideo(driver);
+		String a = driver.getCurrentUrl();
+		Assert.assertEquals(a, "https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+		
+	}
+		
+}

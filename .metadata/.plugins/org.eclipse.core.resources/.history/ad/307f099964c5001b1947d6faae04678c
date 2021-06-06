@@ -1,0 +1,27 @@
+package constants;
+
+public class Constants {
+public static final String HOME_URL = "https://www.humanity.com/";
+public static final String ABOUT_URL = "https://www.humanity.com/about";
+public static final String DASHBOARD_URL = "https://misternobody.humanity.com/app/dashboard/";
+public static final String ABOUTBTN_XPATH = "//*[@id=\"wrapper\"]/footer/div[2]/div/div/div[1]/div[5]/ul/li[1]/a";
+public static final String CLOSEMSSGBTN_XPATH = "//*[@id=\"tcp-modal\"]/div/div/div[1]/button";
+public static final String CLOSECOOKIEMSG_XPATH = "//*[@id=\"cf-root\"]/div/div/div/div[2]/div[2]/div[2]/button";
+public static final String LOGINPAGEBTN_XPATH = "//*[@id=\"navbarSupportedContent\"]/div/a[2]";
+public static final String EMAILBAR_ID = "email";
+public static final String LOGINBTN_XPATH = "//*[@id=\"LoginForm\"]/div[3]/div/button[1]";
+public static final String DASHBOARD_XPATH = "//*[@id=\"_topnav\"]";
+public static final String DASHBOARDBTN_XPATH = "//*[@id=\"topMenu\"]/li[1]";
+public static final String SHIFTPLANNINGBTN_XPATH = "//*[@id=\"topMenu\"]/li[2]";
+
+public static final String TIMECLOCKBTN_XPATH = "//*[@id=\"root\"]/div[2]/div/div/div[1]/div/div/div[2]/div[3]/a";
+public static final String LEAVEBTN_XPATH = "//*[@id=\"root\"]/div[2]/div/div/div[1]/div/div/div[2]/div[4]/a";
+public static final String TRAININGBTN_XPATH = "//*[@id=\"root\"]/div[2]/div/div/div[1]/div/div/div[2]/div[5]/a";
+public static final String STAFFBTN_XPATH = "//*[@id=\"root\"]/div[2]/div/div/div[1]/div/div/div[2]/div[6]/a";
+public static final String AVAILABILITYBTN_XPATH = "//*[@id=\"root\"]/div[2]/div/div/div[1]/div/div/div[2]/div[7]/a";
+public static final String PAYROLLBTN_XPATH = "//*[@id=\"root\"]/div[2]/div/div/div[1]/div/div/div[2]/div[8]/a";
+public static final String REPORTSBTN_XPATH = "//*[@id=\"root\"]/div[2]/div/div/div[1]/div/div/div[2]/div[9]/a";
+public static final String SETTINGSBTN_XPATH = "//*[@id=\"root\"]/div[2]/div/div/div[1]/div/div/div[2]/div[10]/a";
+public static final String LOGO_XPATH = "//*[@id=\"_nav\"]/div[1]";
+public static final String DASHBOARD_TITLE = "Dashboard - Dashboard - Humanity";
+}

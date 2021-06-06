@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="9525" started-at="2021-05-31T17:01:14Z" finished-at="2021-05-31T17:01:24Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="9525" started-at="2021-05-31T17:01:14Z" finished-at="2021-05-31T17:01:24Z">
+      <class name="tests.RegistrationTest">
+        <test-method status="PASS" signature="createDriver()[pri:0, instance:tests.RegistrationTest@1a968a59]" name="createDriver" is-config="true" duration-ms="2095" started-at="2021-05-31T17:01:14Z" finished-at="2021-05-31T17:01:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createDriver -->
+        <test-method status="PASS" signature="testRegBtn()[pri:0, instance:tests.RegistrationTest@1a968a59]" name="testRegBtn" duration-ms="1983" started-at="2021-05-31T17:01:16Z" finished-at="2021-05-31T17:01:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegBtn -->
+        <test-method status="PASS" signature="testRegForm()[pri:0, instance:tests.RegistrationTest@1a968a59]" name="testRegForm" duration-ms="5427" started-at="2021-05-31T17:01:18Z" finished-at="2021-05-31T17:01:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegForm -->
+      </class> <!-- tests.RegistrationTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

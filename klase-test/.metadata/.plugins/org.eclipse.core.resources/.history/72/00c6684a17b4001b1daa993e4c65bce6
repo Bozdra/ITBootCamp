@@ -1,0 +1,22 @@
+package zadatak2;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Proba {
+
+	public static void main(String[] args) {
+		Obuca o1 = new Obuca(500, "Nike", 44, 'm', "Koza");
+		List <Obuca> obuca = new ArrayList<Obuca>();
+		Odeca od1 = new Odeca (100, "Kosulja", 26, 'm', "Karirana");
+		Odeca od2 = new Odeca (50, "Pantalone", 22, 'm', "Dins");
+		List <Odeca> odeca = new ArrayList<Odeca>();
+		
+		Stajling smeksi = new Stajling("Boris");
+		smeksi.dodajOdecu(od1);
+		smeksi.dodajOdecu(od2);
+		
+
+	}
+
+}

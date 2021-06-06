@@ -1,0 +1,26 @@
+package test;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import objs.Home;
+import objs.ListOfVideos;
+
+public class TestVideo {
+	private static WebDriver driver;
+	@Test
+	public void testYT() throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32\\chromedriver.exe");
+		driver = new ChromeDriver();
+		Home.goToYT(driver);
+		
+		Home.findVideo(driver);
+		driver.manage().window().maximize();
+		driver.wait(5000);
+		
+		ListOfVideos.clickOnVideo(driver);
+		
+	}
+		
+}

@@ -1,0 +1,15 @@
+package objs;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class ListOfVideos {
+	
+public static final String VIDEO_XPATH = "//*[@id=\"img\"]";
+public static final String URL_VIDEO = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+
+
+public static void clickOnVideo (WebDriver driver) {
+	driver.findElement(By.xpath(VIDEO_XPATH)).click();
+}
+}

@@ -1,0 +1,29 @@
+package tests;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import constants.Constants;
+import objs.Home;
+
+public class TestHumanity {
+private static WebDriver driver;
+	
+	@BeforeClass
+	public void createDriver() {
+		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32\\chromedriver.exe");
+		driver = new ChromeDriver();
+	}
+	@Test
+	public static void testAboutBtn() {
+	driver.get(Constants.HOME_URL);
+	Home.closeAnnouncement(driver);
+	driver.manage().window().maximize();
+	driver.manage().
+	Home.clickAbout(driver);
+	Assert.assertEquals(driver.getCurrentUrl(), Constants.ABOUT_URL);
+	}
+}

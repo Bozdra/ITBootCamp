@@ -1,0 +1,14 @@
+package zadatak1;
+/*Prvi zadatak
+Napisati program na programskom jeziku Java koji sluzi za pronalazenje niza sa vecim prosecnim elementom. 
+Korisnik na standardniu ulaz unosi duzniu prvog niza, a zatim i sve njegove elemente. 
+Nakon toga unosi duzinu drugog niza i sve njegove elemente. 
+Ukoliko korisnik unese nevalidnu vrednost za duzinu niza ispisati poruku o tome i prekinuti izvrsavanje programa.
+Pretpostaviti da ce korisnik uneti cele brojeve za elemente niza. Ucitavanje niza izvrsiti u zasebnoj funkciji. 
+Napisati funkciju pronadji kojoj se proslednjuju oba niza.
+Funkcija pronadji racuna prosecnu vrednost elementa za oba niza i kao rezultat vreca vecu od te dve prosecne vrednosti.
+Na stendardni izlaz ispisati rezultat funkcije.
+*/
+public class Zadatak1 {
+	
+}

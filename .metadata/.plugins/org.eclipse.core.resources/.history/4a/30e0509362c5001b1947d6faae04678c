@@ -1,0 +1,47 @@
+package tests;
+
+import static org.testng.Assert.assertEquals;
+
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.ElementNotInteractableException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import constants.Constants;
+import objs.Dashboard;
+import objs.Home;
+
+public class TestDashboard {
+	private static WebDriver driver;
+	
+	@BeforeClass
+	public void createDriver() {
+		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32\\chromedriver.exe");
+		driver = new ChromeDriver();
+	}
+	@BeforeMethod
+	public static void Login() throws IOException {
+		TestHumanity.testValidLogin();
+	}
+	
+	@Test 
+	public static void testLogo() {
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		Dashboard.clickTimeClock(driver);
+		Dashboard.clickLogo(driver);
+		Assert.assertEquals(driver.getCurrentUrl(), Constants.DASHBOARD_URL);
+	}
+	
+	@Test 
+	public static void testDashboard() {
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		Dashboard.clickDashboard(driver);
+		Assert.assertEquals(driver.getTitle(), "Dashboard");
+	}
+}

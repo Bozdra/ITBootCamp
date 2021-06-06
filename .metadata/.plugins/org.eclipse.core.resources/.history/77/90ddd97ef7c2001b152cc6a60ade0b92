@@ -1,0 +1,22 @@
+package test;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeClass;
+
+import objs.Home;
+
+public class Test {
+	private static WebDriver driver;
+	
+	@BeforeClass
+	public void createDriver() {
+		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32\\chromedriver.exe");
+		 driver = new ChromeDriver();
+}
+	
+	@Test
+	public void invalidLogin() {
+		driver.get(Home.HOME_URL);
+	}
+}

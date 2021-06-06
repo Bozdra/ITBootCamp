@@ -1,0 +1,77 @@
+package zadatak2;
+
+import java.util.List;
+
+/*Stajling sadrzi ime kreatora, jedan par obuce i jedan ili vise odevnih predmeta. 
+Prilikom kreiranja stajlinga prosledjuje se samo ime kreatora. Moguce je postaviti, 
+dohvatiti i izbaciti obucu, kao i dohvatiti sve odevne predmete, dodati neki odevni predmet,
+ kao i ukloniti odevni predmet sa neke pozicije. Odevni predmeti dodaju se pojedinacno, a ne vise njih odjednom. 
+ Tekstualni opis je kreator - oznaka stajlinga – ukupna cena stajlinga. Oznaka stajling je “z” ukoliko ima vise zenskih stvari, 
+ “m” ukoliko ima vise muskih stvari ili “u” ukoliko ima jednak broj muskih I zenskih stvari ili su sve stvari unisex*/
+public class Stajling {
+
+	private String kreator;
+	private Obuca obuca;
+	private List<Odeca> odeca;
+	
+	public Stajling(String kreator) {
+		super();
+		this.kreator = kreator;
+	}
+	public Obuca getObuca() {
+		return obuca;
+	}
+	public void setObuca(Obuca o1) {
+		this.obuca = o1;
+	}
+	public List<Odeca> getOdeca() {
+		return odeca;
+	}
+	public void dodajOdecu(Odeca o) {
+		odeca.add(o);
+	}
+	public void izbaciOdecu(int pozicija) {
+		odeca.remove(pozicija);
+	}
+	public String getKreator() {
+		return kreator;
+	}
+	@Override
+	public String toString() {
+		char oznakaStajlinga = 0;
+		int brojac1 = 0;
+		int brojac2 = 0;
+		int brojac3 = 0;
+		for (int i = 0; i < odeca.size(); i++) {
+			if (odeca.get(i).getOznaka() == 'm') {
+				brojac1++;
+			} else if (odeca.get(i).getOznaka() == 'z') {
+				brojac2++;
+			} else {
+				brojac3++;
+			}
+		}
+		if (brojac1 > brojac2 && brojac1 > brojac3) {
+			oznakaStajlinga = 'm';
+		} else if (brojac2 > brojac1 && brojac2 > brojac3) {
+			oznakaStajlinga = 'z';
+	} else if (brojac1==brojac2||brojac3==odeca.size()-1) {
+			oznakaStajlinga = 'u';
+	}
+		double ukupnaCena = 0;
+		for  (int i = 0; i < odeca.size(); i++) {
+			ukupnaCena = ukupnaCena + odeca.get(i).getCena() + obuca.getCena();
+		}
+		StringBuilder sb = new StringBuilder();
+		sb.append(getKreator());
+		sb.append(" ");
+		sb.append("-");
+		sb.append(" ");
+		sb.append(oznakaStajlinga);
+		sb.append(" ");
+		sb.append("-");
+		sb.append(" ");
+		sb.append(ukupnaCena);
+		return sb.toString();
+	}
+}

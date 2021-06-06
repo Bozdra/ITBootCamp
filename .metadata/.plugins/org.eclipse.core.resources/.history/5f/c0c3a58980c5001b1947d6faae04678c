@@ -1,0 +1,27 @@
+package objs;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import constants.Constants;
+
+public class Staff {
+	
+	public static void clickAddEmployee(WebDriver driver) {
+		driver.findElement(By.xpath(Constants.ADDEMPLOYEEBTNBTN_XPATH)).click();
+	}
+	public static void inputFirstName(WebDriver driver, String name) {
+		driver.findElement(By.xpath(Constants.FIRSTNAMEBAR_ID)).sendKeys(name);
+	}
+	public static void inputLastName(WebDriver driver, String lName) {
+		driver.findElement(By.xpath(Constants.LASTNAMEBAR_ID)).sendKeys(lName);
+	}
+	public static void inputEmail(WebDriver driver, String email) {
+		driver.findElement(By.xpath(Constants.FIRSTNAMEBAR_ID)).sendKeys(email);
+	}
+	public static void saveEmployee(WebDriver driver) {
+		driver.findElement(By.id(Constants.SAVEEMPLOYEESBTN_ID)).click();
+	}
+	
+	
+}

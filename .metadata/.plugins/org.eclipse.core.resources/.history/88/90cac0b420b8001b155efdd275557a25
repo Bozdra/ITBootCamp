@@ -1,0 +1,10 @@
+package domaciPOI;
+
+public class Brojevi {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
